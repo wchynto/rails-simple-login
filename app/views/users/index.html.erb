@@ -1,0 +1,19 @@
+<h1>Users#index</h1>
+<%= link_to 'New User', users_new_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.name %></td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
