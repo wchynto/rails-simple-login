@@ -1,0 +1,16 @@
+<h1>Login Page</h1>
+<%= form_with model: @user, url:user_sessions_path do |f|%>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div>
+    <%= f.submit 'Login' %>
+  </div>
+<% end %>

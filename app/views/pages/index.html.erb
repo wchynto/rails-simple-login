@@ -1,0 +1,9 @@
+<% if current_user %>
+  <h1>Welcome, <%= current_user.name %></h1>
+  <%= link_to 'Log out', user_session_path(current_user), data: { turbo_method: :delete } %><br>
+<% else %>
+  <h1>This is index page</h1>
+  <%= link_to 'Login', new_user_session_path %>
+<% end %>
+
+<%= link_to 'Secret page', '/pages/secret' %>
